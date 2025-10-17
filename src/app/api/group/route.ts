@@ -12,7 +12,7 @@ async function callGeminiForPlan(
   users: User[]
 ): Promise<GeminiResponse | null> {
   try {
-    const apiKey = "AIzaSyDhg2Q4UMJHwmu3qpSUjDESSHleYbPePio";
+    const apiKey = process.env.GEMINI_API_KEY;
     console.log("Gemini key present:", !!apiKey);
 
     if (!apiKey) return null;
